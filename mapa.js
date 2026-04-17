@@ -33,6 +33,36 @@ let ixtlan = L.marker([17.3341, -96.4867]).bindPopup("Ixtlan de Juarez");
 let tuxtepec = L.marker([18.0936, -96.13147]).bindPopup("Tuxtepec");
 let ayutla = L.marker([18.0936, -96.13147]).bindPopup("Ayutla Mixe");
 
+// GeoJSON aproximado del municipio de Tlacolula de Matamoros
+let tlacolulaGeoJson = {
+  "type": "Feature",
+  "properties": { "name": "Tlacolula de Matamoros" },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [[
+      [-96.5360, 16.9840],
+      [-96.5310, 16.9540],
+      [-96.5240, 16.9280],
+      [-96.4970, 16.9070],
+      [-96.4720, 16.9140],
+      [-96.4500, 16.9340],
+      [-96.4380, 16.9610],
+      [-96.4500, 16.9890],
+      [-96.4820, 16.9950],
+      [-96.5150, 16.9910],
+      [-96.5360, 16.9840]
+    ]]
+  }
+};
+
+let zonaTlacolula = L.geoJSON(tlacolulaGeoJson, {
+  style: {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.25,
+    weight: 2
+  }
+}).bindPopup('Municipio de Tlacolula de Matamoros');
 
 // Crear un layer group con los marcadores
 var coordinaciones = L.layerGroup([tlacolula, ocotlan, zimatlan, miahuatlan, tehuantepec, matias, teotitlan, nochixtlan, tlaxiaco, huajuapan, pinotepa, puerto, ixtlan, tuxtepec, ayutla]);
@@ -42,7 +72,8 @@ coordinaciones.addTo(map);
 
 // === AGREGAR CONTROL DE CAPAS ===
 let overlayMaps = {
-  "Coordinaciones": coordinaciones
+  "Coordinaciones": coordinaciones,
+  "Municipio Tlacolula": zonaTlacolula
 };
 
 L.control.layers(null, overlayMaps).addTo(map);

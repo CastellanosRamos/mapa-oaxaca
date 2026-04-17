@@ -147,6 +147,36 @@ let villaTututepec = L.marker([16.0167, -97.5667]).bindPopup("Villa de Tututepec
 let villaZaachila = L.marker([16.9500, -96.7667]).bindPopup("Villa de Zaachila");
 let villaSolaVega = L.marker([16.4833, -97.0167]).bindPopup("Villa Sola de Vega");
 
+// GeoJSON aproximado del municipio de Tlacolula de Matamoros
+let tlacolulaGeoJson = {
+  "type": "Feature",
+  "properties": { "name": "Tlacolula de Matamoros" },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [[
+      [-96.5360, 16.9840],
+      [-96.5310, 16.9540],
+      [-96.5240, 16.9280],
+      [-96.4970, 16.9070],
+      [-96.4720, 16.9140],
+      [-96.4500, 16.9340],
+      [-96.4380, 16.9610],
+      [-96.4500, 16.9890],
+      [-96.4820, 16.9950],
+      [-96.5150, 16.9910],
+      [-96.5360, 16.9840]
+    ]]
+  }
+};
+
+let zonaTlacolula = L.geoJSON(tlacolulaGeoJson, {
+  style: {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.25,
+    weight: 2
+  }
+}).bindPopup('Municipio de Tlacolula de Matamoros');
 
 // Crear un layer group con los marcadores
 // Crear los layer groups usando las variables (sin duplicados)

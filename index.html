@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Instituto Estatal de Educación para Adultos Oaxaca</title>
+	 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   		integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   		crossorigin=""/>		
+	<link rel="stylesheet" type="text/css" href="mapa.css"/>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet-color-markers/css/leaflet-color-markers.css">
+
+     
+	<!-- Fuente Monserrat -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+
+	<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<br>
+<nav class="navbar fixed-top navbar-light" style="background-color: #b81e49;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="images/logo-ieea_blanco.png"  width="551" height="78" class="d-inline-block align-text-top">
+    </a>
+  </div>
+</nav>
+      <div class="tittle-map">
+			<p>MAPA DE COORDINACIONES DE ZONA Y PLAZAS COMUNITARIAS DE OAXACA</p>
+	  </div>
+      <div class="container">
+			<div class="form-group col-md-12" >
+				<select name="select-location" id="select-location" class="form-select ">
+					<option value="-1">Seleccione una coordinación de zona para mostrar plazas comunitarias:</option>
+					<option value="16.954167,-96.479167">Tlacolula</option>
+					<option value="16.791389,-96.691667">Ocotlán de Morelos</option>	
+					<option value="16.77,-96.95">Zimatlán de Álvarez</option>
+					<option value="16.3327,-96.59558">Miahuatlán de Porfirio Díaz</option>
+					<option value="16.31841,-95.24783">Santo Domingo Tehuantepec</option>
+					<option value="16.8754,-95.04106">Matías Romero</option>
+					<option value="18.133333,-97.083333">Teotitlán de Flores Magón</option>
+					<option value="17.4588,-97.22163">Nochixtlán</option>
+					<option value="17.2700, -97.67790">Tlaxiaco</option>
+					<option value="17.8042, -97.78069">Huajuapan de León</option>
+					<option value="16.3381, -98.04850">Pinotepa Nacional</option>
+					<option value="15.8658, -97.06923">Puerto Escondido</option>
+					<option value="17.3341, -96.48677">Ixtlán de Juárez</option>
+					<option value="18.0936, -96.13147">Tuxtepec</option>
+					<option value="17.0279, -96.07599">Ayutla Mixe</option>
+					<option value="17.2054, -96.80044">Etla</option>
+					<option value="16.4384, -95.01963">Juchitán de Zaragoza</option>
+					<option value="17.3336, -98.00988">Juxtlahuaca</option>
+					<option value="17.0692, -96.71734">Oaxaca de Juárez</option>
+					<option value="17.4492, -95.42823">María Lombardo</option>
+					<option value="18.1296, -96.83831">Huautla de Jiménez</option>
+					<option value="16.2793, -97.81914">Jamiltepec</option>
+					<option value="17.0259, -96.73453">Xoxocotlán</option>
+					<option value="15.7406, -96.46812">Pochutla</option>
+					<option value="16.4833, -94.35568">Zanatepec</option>
+					<option value="18.0591, -96.39639">Ojitlán</option>	
+				</select><br>
+			</div>
+		</div>
+
+	<!-- Mapa oaxaca -->
+	<div id="map"></div>
+
+	<!-- Rosa de los vientos -->
+    <div id="wind-rose" class="wind-rose-container">
+       <img src="images/rosa_vientos.png" alt="Rosa de los Vientos" class="wind-rose-image">
+    </div>
+
+</head>
+<body>
+
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   		crossorigin=""></script>   		
+	<script src="clone_layer.js"></script>
+	<script src="mapa.js"></script>
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <div id="data"></div>
+</body>
+</html>

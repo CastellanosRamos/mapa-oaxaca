@@ -1,0 +1,59 @@
+.tittle-map {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    margin-top:6%;
+}
+
+.tittle-map p {
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    color: #b81e49;
+    margin: 0;
+}
+
+#map {
+  height: 90vh;
+  width: 100hw;
+}
+
+.form-group {
+  text-align: center;
+}
+
+/* Estilos para tooltips de municipios */
+.municipio-tooltip {
+  background: rgba(44, 62, 80, 0.9);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.municipio-tooltip:before {
+  border-top-color: rgba(44, 62, 80, 0.9);
+}
+
+/* === ROSA DE LOS VIENTOS (versión HTML) === */
+#wind-rose {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#wind-rose .wind-rose-image {
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+
